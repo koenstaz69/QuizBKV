@@ -34,7 +34,7 @@ if (isset($_POST['signUp']))
 <body>
 <h1>Registreren</h1><br>
 <form method="post">
-    <input type="text" name="naam" placeholder="Naam" required>
+    <input type="text" name="gebruikersnaam" placeholder="Naam" required>
     <input type="email" name="email" placeholder="Email" required>
     <input type="password" name="wachtwoord" placeholder="Wachtwoord" required>
     <button type="submit" name="signUp" class="login loginmodal-submit">Registreren</button>
