@@ -1,6 +1,13 @@
 <?php
+session_start();
 
 require_once 'classes/DB.class.php';
+
+if(isset($_POST['logoutButton']))
+{
+    $logout = new User();
+    $logout->logOut();
+}
 
 ?>
 <!DOCTYPE html>
@@ -24,6 +31,7 @@ require_once 'classes/DB.class.php';
         <div class="col-lg-6">
             <a href="login.php" class="btn btn-primary">Inloggen</a>
             <a href="registratie.php" class="btn btn-primary">Registreren</a>
+            <a href="logout.php" class="btn btn-primary">Uitloggen</a>
         </div>
     </div>
 </div>
