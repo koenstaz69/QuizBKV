@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e127c86c-c931-40bc-9a1b-70786e0a88ea" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/classes/Quiz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Quiz.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,8 +52,8 @@
       <file leaf-file-name="Quiz.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/Quiz.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="408">
+              <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -197,12 +196,12 @@
       <workItem from="1549798073643" duration="438000" />
       <workItem from="1549875166229" duration="1194000" />
       <workItem from="1549879834228" duration="750000" />
-      <workItem from="1549883462284" duration="2026000" />
+      <workItem from="1549883462284" duration="2625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16985000" />
+    <option name="totallyTimeSpent" value="17584000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="846" extended-state="6" />
@@ -518,8 +517,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Quiz.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="408">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
         </state>
       </provider>
     </entry>

@@ -22,6 +22,6 @@ class Quiz
 
     public function getQuiz()
     {
-        $getQuiz = 'SELECT * FROM quiz WHERE user_id'
+        $getQuiz = 'SELECT * FROM quiz WHERE user_id';
     }
 }
