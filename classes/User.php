@@ -16,6 +16,9 @@ class User
         $stmt->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
         $stmt->bindValue(':wachtwoord', password_hash($_POST['wachtwoord'], PASSWORD_BCRYPT), PDO::PARAM_STR);
         $stmt->execute();
+
+        header("Location: login.php?registered");
+        exit();
     }
 
     public function logUser()
@@ -53,9 +56,8 @@ class User
                 $_SESSION['id'] = $user['user_id'];
                 $_SESSION['logged_in'] = time();
 
-                header("Location: index.php?login=success");
+                header("Location: userpage.php?login=success");
                 exit();
-
             }
         }
     }

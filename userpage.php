@@ -1,7 +1,11 @@
 <?php
 session_start();
 
-require_once 'classes/DB.class.php';
+if(!isset($_SESSION['id']) || !isset($_SESSION['logged_in']))
+{
+    header("Location: index.php?logged=false");
+    exit();
+}
 
 if(isset($_POST['logoutButton']))
 {
@@ -13,7 +17,7 @@ if(isset($_POST['logoutButton']))
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Quiz</title>
+    <title>Quiz</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -25,12 +29,11 @@ if(isset($_POST['logoutButton']))
 
 </head>
 <body>
-<h1>Index Pagina</h1>
+<h1>User Pagina</h1>
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <a href="login.php" class="btn btn-primary">Inloggen</a>
-            <a href="registratie.php" class="btn btn-primary">Registreren</a>
+            <a href="logout.php" class="btn btn-primary">Uitloggen</a>
         </div>
     </div>
 </div>
