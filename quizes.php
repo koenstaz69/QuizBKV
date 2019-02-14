@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-include "navbar.php";
+include "includes/navbar.php";
 ?>
 <div class="container mt-lg-4">
     <div class="row">
@@ -50,7 +50,7 @@ include "navbar.php";
     </div>
 </div>
 <?php
-include "footer.php";
+include "includes/footer.php";
 ?>
 </body>
 </html>
