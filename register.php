@@ -33,7 +33,7 @@ if (isset($_POST['signUp']))
 <body>
 <div class="container">
         <div class="loginmodal-container">
-            <a href="index.php" class="btn btn-primary">Home</a>
+            <a href="index.php" style="margin-top: 5%;" class="btn btn-primary">Home</a>
             <h1>Registreren</h1><br>
             <form method="post">
                 <input type="text" name="naam" placeholder="Gebruikersnaam" required>
