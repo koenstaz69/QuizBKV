@@ -19,9 +19,4 @@ class Quiz
         header("Location: userpage.php?registeredquiz");
         exit();
     }
-
-    public function getQuiz()
-    {
-        $getQuiz = 'SELECT * FROM quiz WHERE user_id';
-    }
 }
