@@ -6,17 +6,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="register.php">Registreer</a>
             </li>
             <li class="nav-item active">
-<<<<<<< HEAD
                 <a class="nav-link" href="login.php">Login</a>
-=======
-                <a class="nav-link" href="Login.php">Login</a>
->>>>>>> parent of f00ef6f... rip footer
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

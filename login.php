@@ -23,7 +23,6 @@ if(isset($_POST['submitLogin']))
 </head>
 <body>
 <div class="container">
-    <div class="modal-dialog">
         <div class="loginmodal-container">
             <a href="index.php" class="btn btn-primary">Home</a>
             <h1>Login</h1><br>
@@ -33,7 +32,6 @@ if(isset($_POST['submitLogin']))
                 <button type="submit" name="submitLogin" class="login loginmodal-submit">Login</button>
             </form>
         </div>
-    </div>
 </div>
 <?php include 'includes/scripts.php'; ?>
 </body>

@@ -29,6 +29,7 @@ if(isset($_POST['logoutButton']))
     <div class="row">
         <div class="col-lg-6">
             <a href="logout.php" class="btn btn-primary">Uitloggen</a>
+            <a href="quizes.php" class="btn btn-primary">Quizes</a>
         </div>
     </div>
 </div>
