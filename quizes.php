@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['id']) || !isset($_SESSION['logged_in']))
+{
+    header("Location: index.php?logged=false");
+    exit();
+}
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
