@@ -45,11 +45,10 @@
         </div>
 
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="footer-copyright" style="background-color: white; padding-top: 1%">
-                <div class="container">
-                </div>
+    <div class="lower full-width">
+        <div class="container">
+            <div class="row">
+                <h6 class="text-center">&copy <?php echo date("Y") ?> Quiz</h6>
             </div>
         </div>
     </div>

@@ -22,6 +22,9 @@ if(isset($_POST['submitLogin']))
     <?php include 'includes/links.php'; ?>
 </head>
 <body>
+
+<?php include 'includes/navbar.php'; ?>
+
 <div class="container">
         <div class="loginmodal-container">
             <a href="index.php" class="btn btn-primary">Home</a>
@@ -33,6 +36,8 @@ if(isset($_POST['submitLogin']))
             </form>
         </div>
 </div>
+<?php include 'includes/footer.php'; ?>
+
 <?php include 'includes/scripts.php'; ?>
 </body>
 </html>

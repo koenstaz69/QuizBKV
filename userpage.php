@@ -24,6 +24,9 @@ if(isset($_POST['logoutButton']))
 
 </head>
 <body>
+
+<?php include 'includes/navbar.php'; ?>
+
 <h1>User Pagina</h1>
 <div class="container">
     <div class="row">
@@ -33,6 +36,8 @@ if(isset($_POST['logoutButton']))
         </div>
     </div>
 </div>
+
+<?php include 'includes/footer.php'; ?>
 
 <?php include 'includes/scripts.php'; ?>
 <script>

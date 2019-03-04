@@ -26,6 +26,9 @@ if (isset($_POST['signUp']))
 
 </head>
 <body>
+
+<?php include 'includes/navbar.php'; ?>
+
 <div class="container">
         <div class="loginmodal-container">
             <a href="index.php" class="btn btn-primary">Home</a>
@@ -38,6 +41,9 @@ if (isset($_POST['signUp']))
             </form>
         </div>
 </div>
+
+<?php include 'includes/footer.php'; ?>
+
 <?php include 'includes/scripts.php'; ?>
 <script>
 
