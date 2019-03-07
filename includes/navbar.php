@@ -14,9 +14,11 @@
                     <a class=\"nav-link\" href=\"login.php\">Login</a></li>";
 
             }else{
-            echo "<a href=\"logout.php\" name=\"logoutButton\" class=\"btn btn-primary\">   Uitloggen</a>";
-
-
+            echo "  <li class=\"nav-item active\">
+            <a href=\"logout.php\" name=\"logoutButton\" class=\"nav-link\">   Uitloggen</a></li>
+                    
+                    <li class=\"nav-item active\">
+              <a href=\"quizes.php\" class=\"nav-link\">Quizes</a></li>";
              } ?> 
             
         </ul>
