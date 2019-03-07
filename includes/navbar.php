@@ -8,14 +8,13 @@
             <li class="nav-item active">
             </li>
       <?php if (!isset($_SESSION['logged_in'])) {
-            echo "<li class=\"nav-item active\">";
-             echo "<a class=\"nav-link\" href=\"register.php\">Registreer</a></li>";
-           echo "<li class=\"nav-item active\">";
-            echo "<a class=\"nav-link\" href=\"login.php\">Login</a></li>";
+            echo "<li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"register.php\">Registreer</a></li>
+                  <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"login.php\">Login</a></li>";
 
             }else{
-
-               echo "<a href=\"logout.php\" name=\"logoutButton\" class=\"btn btn-primary\">Uitloggen</a>";
+            echo "<a href=\"logout.php\" name=\"logoutButton\" class=\"btn btn-primary\">   Uitloggen</a>";
 
 
              } ?> 
