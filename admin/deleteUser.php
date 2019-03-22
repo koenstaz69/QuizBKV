@@ -1,4 +1,5 @@
 <?php
+
 include '../classes/DB.class.php';
 
 $id = $_GET['user_id'];
