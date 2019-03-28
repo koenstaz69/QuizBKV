@@ -11,7 +11,7 @@ require_once 'classes/User.php';
 //}
 
 // Haalt het menu op
-$getUsers = 'SELECT * FROM users';
+$getUsers = 'SELECT * FROM users ORDER BY naam';
 
 // Variabel query wordt aangemaakt
 $query = DB::get()->prepare($getUsers);
@@ -66,7 +66,7 @@ $query->setFetchMode(PDO::FETCH_ASSOC);
                             "<td>" . $row["email"] . "</td>" .
                             "<td>" . $row["rol"] . "</td>" .
                             "<td><a class='btn btn-danger' href='admin/deleteUser.php?user_id=".$row['user_id']."'>Verwijderen</a></td>" .
-//                          "<td><a class='btn btn-warning' href='editReservation.php?klant_id=".$row['klant_id']."'>Aanpassen</a></td>" .
+                            "<td><a class='btn btn-warning' href='admin/editUser.php?user_id=".$row['user_id']."'>Aanpassen</a></td>" .
                             "</tr>"
                     ?>
                     <?php endwhile; ?>
