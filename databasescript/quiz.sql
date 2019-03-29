@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 28 mrt 2019 om 14:39
--- Serverversie: 10.1.37-MariaDB
--- PHP-versie: 7.3.1
+-- Gegenereerd op: 29 mrt 2019 om 12:21
+-- Serverversie: 10.1.30-MariaDB
+-- PHP-versie: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `quiz` (
-  `quiz_id` int(7) NOT NULL,
-  `gebruiker_id` int(7) NOT NULL,
-  `onderwerp` varchar(255) NOT NULL
+  `quiz_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `onderwerp` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -56,20 +56,21 @@ CREATE TABLE `quizronde` (
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
   `naam` varchar(255) NOT NULL,
-  `email` varchar(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `wachtwoord` varchar(255) NOT NULL,
-  `rol` int(1) NOT NULL
+  `admin` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `users`
 --
 
-INSERT INTO `users` (`user_id`, `naam`, `email`, `wachtwoord`, `rol`) VALUES
-(3, 'gebruiker', 'test@gmail.', '$2y$10$VNoWtg4v8bQ.oOSZpl0yvuCIBwoL3HxbtBqeC33ygDpkT7IP83IC6', 0),
-(4, 'test1', 'test1@gmail', '$2y$10$F.tRjkNiEqXd467fuouwbeHk7ZBYB7dMP6hO.GTXcQjyU9BPmOBLO', 0),
-(5, 'tetk', 'tekt@gmail.', '$2y$10$QZTmogR.N7/wqdEEzKxXM.0drYyqa93.3Z1TcGu.jBVXx1QTl56qa', 0),
-(6, 'koentje', 'koenstaz@gm', '$2y$10$9iWDpjhR5m.bv29Okmbi3uc0KuG8Uo6IpdR/u4bIPUNnWprSMzQ3.', 0);
+INSERT INTO `users` (`user_id`, `naam`, `email`, `wachtwoord`, `admin`) VALUES
+(5, 'janberd', 'janberd.a@gmail.com', '$2y$10$uDCaQLcWNsjsbQ.prKjQIuF77rNJKe/2EsFPDRzADu4qMo0Er7NXS', 0),
+(6, 'koen', 'koen@gmail.com', '$2y$10$k9inFIsRf9U5ihSXYTZ/VuL50hf0QvIAiAOrg/BvftMT1MCb3hdEO', 0),
+(7, 'rico', 'rico@gmail.com', '$2y$10$2Du/hveATmJ3.SsLesjkMObf1oZRftpzLNrmA1YgZkAvWm81VcKhi', 0),
+(8, 'spa', 'spa@gmail.com', '$2y$10$WVyFPXfYyFFfqdXL2g4Q.e5QIJPGgWF.V0YIkWhi1G2UT.xLY1P5G', 0),
+(9, 'dell', 'dell@gmail.com', '$2y$10$uUhwQUGr8daizEwhWf5J8uljpLYNoACnb6S/j/l3TybL.QmOIHPmO', 0);
 
 -- --------------------------------------------------------
 
@@ -95,7 +96,9 @@ CREATE TABLE `vragen` (
 -- Indexen voor tabel `quiz`
 --
 ALTER TABLE `quiz`
-  ADD PRIMARY KEY (`quiz_id`);
+  ADD PRIMARY KEY (`quiz_id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `quiz_id` (`quiz_id`);
 
 --
 -- Indexen voor tabel `quizronde`
@@ -109,40 +112,35 @@ ALTER TABLE `quizronde`
 -- Indexen voor tabel `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`);
+  ADD PRIMARY KEY (`user_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexen voor tabel `vragen`
 --
 ALTER TABLE `vragen`
   ADD PRIMARY KEY (`vraag_id`),
-  ADD KEY `quiz_id` (`quiz_id`);
+  ADD KEY `vragen_ibfk_1` (`quiz_id`);
 
 --
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
 --
--- AUTO_INCREMENT voor een tabel `quiz`
---
-ALTER TABLE `quiz`
-  MODIFY `quiz_id` int(7) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT voor een tabel `vragen`
---
-ALTER TABLE `vragen`
-  MODIFY `vraag_id` int(7) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Beperkingen voor geëxporteerde tabellen
 --
+
+--
+-- Beperkingen voor tabel `quiz`
+--
+ALTER TABLE `quiz`
+  ADD CONSTRAINT `quiz_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 
 --
 -- Beperkingen voor tabel `quizronde`
