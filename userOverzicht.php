@@ -52,7 +52,7 @@ $query->setFetchMode(PDO::FETCH_ASSOC);
                     <th>Id</th>
                     <th>Naam</th>
                     <th>Email</th>
-                    <th>Rol</th>
+                    <th>Admin Rechten  </th>
                     <th></th>
                 </tr>
                 </thead>
@@ -64,7 +64,7 @@ $query->setFetchMode(PDO::FETCH_ASSOC);
                             "<td>" . $row["user_id"] . "</td>" .
                             "<td>" . $row["naam"] . "</td>" .
                             "<td>" . $row["email"] . "</td>" .
-                            "<td>" . $row["rol"] . "</td>" .
+                            "<td>" . $row["admin"] . "</td>" .
                             "<td><a class='btn btn-danger' href='admin/deleteUser.php?user_id=".$row['user_id']."'>Verwijderen</a></td>" .
                             "<td><a class='btn btn-warning' href='admin/editUser.php?user_id=".$row['user_id']."'>Aanpassen</a></td>" .
                             "</tr>"
