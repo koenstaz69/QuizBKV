@@ -52,7 +52,7 @@ $query->setFetchMode(PDO::FETCH_ASSOC);
                     <th>Id</th>
                     <th>Naam</th>
                     <th>Email</th>
-                    <th>Admin Rechten  </th>
+                    <th>Admin Rechten</th>
                     <th></th>
                 </tr>
                 </thead>

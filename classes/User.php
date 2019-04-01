@@ -61,13 +61,4 @@ class User
             }
         }
     }
-
-public function deleteUser(){
-
-$sql = "DELETE FROM users WHERE naam =  :naam ";
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':filmID', $_POST['filmID'], PDO::PARAM_INT);   
-$stmt->execute();
-
-}
 }
