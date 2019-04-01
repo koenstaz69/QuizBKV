@@ -1,14 +1,14 @@
 <?php
 
 require_once 'classes/DB.class.php';
-require_once 'classes/Vraag.php';
+require_once 'classes/Quiz.php';
 
 
 if (isset($_POST['signUp']))
 {
-    $vraag = new Vraag();
-    $vraag->regVraag();
-    return $vraag;
+    $quiz = new Quiz();
+    $quiz->regQuiz();
+    return $regQuiz;
 }
 
 ?>
@@ -28,14 +28,11 @@ if (isset($_POST['signUp']))
 <div class="container">
         <div class="loginmodal-container">
             <a href="index.php" class="btn btn-primary">Home</a>
-            <h1>Vraag</h1><br>
+            <h1>Quiz</h1><br>
             <form method="post">
-                <input type="text" name="vraag" placeholder="Vraag" required>
-                <input type="text" name="antwoord1" placeholder="antwoord" required>
-                <input type="text" name="antwoord2" placeholder="antwoord" required>
-                <input type="text" name="antwoord3" placeholder="antwoord" required>
-                <input type="text" name="antwoord4" placeholder="antwoord" required>
-                <button type="submit" name="signUp" class="login loginmodal-submit">Opslaan</button>
+                <input type="text" name="onderwerp" placeholder="onderwerp" required>
+              
+                <button type="submit" name="signUp" class="login loginmodal-submit">Aanmaken</button>
             </form>
         </div>
 </div>

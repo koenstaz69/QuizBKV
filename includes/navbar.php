@@ -18,7 +18,9 @@
             <a href=\"logout.php\" name=\"logoutButton\" class=\"nav-link\">   Uitloggen</a></li>
                     
                     <li class=\"nav-item active\">
-              <a href=\"quizes.php\" class=\"nav-link\">Quizes</a></li>";
+              <a href=\"quizes.php\" class=\"nav-link\">Quizes</a></li>
+                 <li class=\"nav-item active\">
+              <a href=\"regvraag.php\" class=\"nav-link\">Vragen</a></li>";
              } ?> 
             
         </ul>
